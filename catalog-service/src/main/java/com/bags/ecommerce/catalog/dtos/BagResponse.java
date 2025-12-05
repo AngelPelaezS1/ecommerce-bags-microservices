@@ -2,6 +2,7 @@ package com.bags.ecommerce.catalog.dtos;
 
 import com.bags.ecommerce.catalog.enums.Category;
 import com.bags.ecommerce.catalog.enums.Condition;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -9,12 +10,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class CreateBagRequest {
+@NoArgsConstructor
+public class BagResponse {
+
+    @NotBlank @Id
+    private UUID id;
 
     @NotBlank
     private String brand;
