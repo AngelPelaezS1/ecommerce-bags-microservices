@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/bags")
+@RequestMapping("/api/bags")
 public class BagController {
 
     private final BagService bagService;
